@@ -31,6 +31,7 @@
     --sectionShadow: 0px 0px 25px #0000004D;
 
     --gridentBg: transparent linear-gradient(238deg, var(--yellow) 0%, var(--purple) 100%) 0% 0% no-repeat padding-box;
+    --gridentBg2: transparent linear-gradient(229deg, var(--yellow) 0%, var(--purple) 100%) 0% 0% no-repeat padding-box;
 }
 
 
@@ -758,7 +759,9 @@ header {
 .basic-title::after {
     margin-top: 4px;
     content: "";
-    background: var(--gridentBg);
+    /* background: var(--gridentBg); */
+    background: url('../images/line.png') no-repeat;
+    background-size: cover;
     height: 3px;
     width: 96px;
     display: block;
@@ -913,7 +916,7 @@ header {
 }
 
 .service:hover {
-    background: var(--gridentBg);
+    background: var(--gridentBg2);
 }
 
 .service:hover img {
@@ -1045,7 +1048,6 @@ header {
 
 .products-filter-list a {
     padding: 8px 30px;
-    background: var(--gridentBg);
     color: var(--white);
     font: Bold 23px/28px var(--fontBold);
     margin-left: 38px;
@@ -1056,6 +1058,26 @@ header {
 .products-filter-list a.active {
     background: var(--white);
     color: var(--darkBlue);
+}
+
+.products-filter-list li:nth-child(2) a {
+    background: url('../images/filter-2.png') no-repeat;
+    background-size: cover;
+}
+
+.products-filter-list li:nth-child(3) a {
+    background: url('../images/filter-3.png') no-repeat;
+    background-size: cover;
+}
+
+.products-filter-list li:nth-child(4) a {
+    background: url('../images/filter-4.png') no-repeat;
+    background-size: cover;
+}
+
+.products-filter-list li:nth-child(5) a {
+    background: url('../images/filter-5.png') no-repeat;
+    background-size: cover;
 }
 
 .products-filter-content .col-12 {

@@ -152,6 +152,9 @@ $(document).ready(function ($) {
         }
     });
 
+    // iniat WOW Js
+    new WOW().init();
+
 });
 
 
