@@ -1,8 +1,12 @@
 // $(window).on('load', function () {
 //     $('.loader').fadeOut(500, function () {
 //         $(this).remove();
-//     });      
+//     });   
+//     if ($(window).width() < 768) {
+//         $('.header-nav').removeClass('wow fadeInUp');  
+//     }    
 // });
+
 
 
 /*global $ */
@@ -138,7 +142,7 @@ $(document).ready(function ($) {
         loop: true,
         nav: true,
         dots:false,
-        navText: ["<i class='icofont-hand-drawn-right'></i>", "<i class='icofont-hand-drawn-left'></i>"],
+        navText: ["<img src='images/arrow-right.png'>", "<img src='images/arrow-left.png'>"],
         responsive: {
             0: {
                 items: 2
@@ -150,6 +154,38 @@ $(document).ready(function ($) {
                 items: 4
             }
         }
+    });
+
+
+    // INPUT FOCUS ANIMATION 
+    $('.field input').focus(function(){
+        $(this).parent().addClass('focused');
+    });
+
+    $('.field input').each(function() { 
+        if ($(this).val() != "") {
+            $(this).parent('.field').addClass('focused');   
+        }
+    });
+
+    $('.field input').focusout(function(){
+        if($(this).val() === "")
+        $(this).parent('.field').removeClass('focused');
+    });
+
+    $('.field textarea').focus(function(){
+        $(this).parent('.field').addClass('focused');
+    });
+
+    $('.field textarea').each(function() { 
+        if ($(this).val() != "") {
+            $(this).parent('.field').addClass('focused');   
+        }
+    });
+
+    $('.field textarea').focusout(function(){
+        if($(this).val() === "")
+        $(this).parent('.field').removeClass('focused');
     });
 
     // iniat WOW Js
