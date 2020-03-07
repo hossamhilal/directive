@@ -22,6 +22,7 @@
     --lightPurple: #FF6D87;
     --orange: #E26D1E;
     --grey: #F7F5FC;
+    /* --grey: #efefef; */
     --darkGrey: #F3EDF9;
     --greyBg: #c9bcd8;
 
@@ -139,7 +140,7 @@ header {
 }
 
 .header-logo {
-    width: 255px;
+    width: 180px;
 }
 
 .header-features {
@@ -157,12 +158,12 @@ header {
 .social a {
     width: 28px;
     height: 28px;
-    line-height: 28px;
     border-radius: 50%;
     background: var(--white);
     color: var(--darkBlue);
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 8px;
 }
 
@@ -218,7 +219,7 @@ header {
 
 
 .call label {
-    font: Bold 15px/17px Montserrat;
+    font: Bold 13px/15px Montserrat;
     color: var(--white);
     margin: 0;
 }
@@ -251,11 +252,21 @@ header {
 }
 
 .language-choosed {
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    color: var(--orange);
+    width: 28px;
+    height: 28px;
+    font: Bold 13px/15px var(--fontBold);
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    padding-top: 3px;
+}
+
+.language-choosed:hover {
+    background: var(--gridentBg);
+    color: var(--white);
 }
 
 .language-list {
@@ -268,9 +279,9 @@ header {
     overflow: hidden;
 }
 
-.language:hover .language-list {
+/* .language:hover .language-list {
     display: block;
-}
+} */
 
 .language-list a {
     font-size: 11px;
@@ -460,7 +471,7 @@ header {
 
 .slider-text h1 {
     color: var(--white);
-    font: Bold 45px/63px var(--fontBold);
+    font: Bold 25px/40px var(--fontBold);
 }
 
 .header-slider .item img {
@@ -801,29 +812,29 @@ header {
 }
 
 .work-step .icon {
-    width: 135px;
-    height: 135px;
+    width: 110px;
+    height: 110px;
     box-shadow: var(--shadow);
     background: var(--gridentBg2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
     margin: auto;
     position: relative;
 }
 
 .work-step .data {
     background: var(--white);
-    margin-top: calc(-135px / 2);
-    padding: 90px 15px 20px;
+    margin-top: calc(-110px / 2);
+    padding: 75px 15px 20px;
     box-shadow: var(--shadow);
     border-radius: 16px;
 }
 
 .work-step .data h3 {
-    font: Bold 28px/34px var(--fontBold);
+    font: Bold 22px/34px var(--fontBold);
     color: var(--darkBlue);
 }
 
@@ -831,6 +842,7 @@ header {
     color: var(--text);
     text-align: right;
     font: Light 18px/21px var(--fontNormal);
+    margin: 0;
 }
 
 .work-step:hover {
@@ -906,6 +918,18 @@ header {
     justify-content: center;
 }
 
+.service.first {
+    background: var(--serviceGrident);
+}
+
+.service.first img {
+    filter: brightness(0) invert(1);
+}
+
+.service.first h4 {
+    color: var(--white);
+}
+
 .service:nth-child(2) {
     margin-top: 103px;
     margin-right: -10px;
@@ -938,7 +962,7 @@ header {
 }
 
 .service h4 {
-    font: Bold 18px/30px var(--fontBold);
+    font: Bold 17px/30px var(--fontBold);
     color: var(--darkBlue);
 }
 
@@ -1075,7 +1099,7 @@ header {
 .products-filter-list a {
     padding: 8px 30px;
     color: var(--white);
-    font: Bold 23px/28px var(--fontBold);
+    font: Bold 17px/28px var(--fontBold);
     margin-left: 38px;
     border-radius: 25px;
     background: var(--filterGrident);
@@ -1162,10 +1186,10 @@ header {
 }
 
 .primaryBtn {
-    font: Bold 23px/28px var(--fontBold);
+    font: Bold 18px/28px var(--fontBold);
     color: var(--white);
     background: var(--serviceboxGrident);
-    padding: 3px 30px;
+    padding: 6px 30px;
     border-radius: 25px;
     display: inline-block;
     margin-top: 35px;
@@ -1335,7 +1359,7 @@ header {
 }
 
 .sponsors-owl .owl-item img {
-    max-height: 60px;
+    max-height: 35px;
     width: auto;
     max-width: 100%;
 }
@@ -1422,7 +1446,7 @@ header {
     color: var(--white);
     text-align: center;
     display: flex;
-    font: Bold 9px/11px var(--fontBold);
+    font: Bold 9px/14px var(--fontBold);
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -1442,7 +1466,7 @@ header {
 }
 
 .blog-content h2 {
-    font: Bold 22px/26px var(--fontBold);
+    font: Bold 17px/26px var(--fontBold);
     color: var(--darkBlue);
 }
 
@@ -1540,7 +1564,7 @@ header {
 .contact-box ul li {
     display: flex;
     align-items: center;
-    font: normal 20px/24px var(--fontNormal);
+    font: normal 17px/24px var(--fontNormal);
     color: var(--text);
     margin-bottom: 15px;
 }
@@ -1603,6 +1627,28 @@ header {
 
     .contact-box-block {
         padding: 15px;
+    }
+}
+
+@media (min-width:1024px) {
+    .contact .row {
+        width: 900px;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .contact .basic-title {
+        width: 900px;
+        max-width: 100%;
+        margin: 0 auto 100px;
+    }
+
+    .contact .row .col-12:nth-child(1){
+        padding: 0 0 0 7px;
+    }
+
+    .contact .row .col-12:nth-child(2){
+        padding: 0 7px 0 0;
     }
 }
 
@@ -1695,7 +1741,7 @@ header {
 }
 
 .footer-logo {
-    width: 175px;
+    width: 160px;
     margin-bottom: 20px;
 }
 
@@ -1734,7 +1780,8 @@ header {
 }
 
 .footer-links ul {
-    font: Bold 16px/19px var(--fontBold);
+    /* font: normal 16px/19px var(--fontNormal); */
+    font: normal 16px/19px var(--fontNormal);
     color: var(--text);
 }
 
@@ -1819,13 +1866,15 @@ header {
     width: 100px;
     height: 25px;
     border: 0;
-    font: Bold 14px/17px var(--fontBold);
+    font: Bold 12px/17px var(--fontBold);
     margin-top: 5px;
 }
 
 .contact-form .primaryBtn:hover {
     color: var(--darkBlue);
     cursor: pointer;
+    box-shadow: none;
+    outline: 0;
 }
 
 .contact-form {
@@ -1850,7 +1899,7 @@ header {
 }
 
 .privacy {
-    padding: 25px 0 30px;
+    padding: 20px 0;
     text-align: center;
     border-top: 1px solid var(--grey);
 }
@@ -1915,7 +1964,7 @@ header {
 }
 
 .internal-header-box h1 {
-    font: Bold 60px/72px var(--fontBold);
+    font: Bold 34px/72px var(--fontBold);
     color: var(--darkBlue);
     text-align: center;
     position: relative;
@@ -1969,7 +2018,7 @@ header {
 }
 
 .about-us h3 {
-    font: Bold 25px/26px var(--fontBold);
+    font: Bold 23px/26px var(--fontBold);
     color: var(--darkBlue);
     margin: 25px 0;
 }
@@ -2002,7 +2051,7 @@ header {
 }
 
 .Why-us-block h4 {
-    font: Bold 30px/36px var(--fontBold);
+    font: Bold 22px/36px var(--fontBold);
     color: var(--darkBlue);
     margin: 0;
 }
@@ -2020,8 +2069,9 @@ header {
 }
 
 .why-us-qoute h3 {
-    font: Bold 45px/54px var(--fontBold);
+    font: Bold 25px/54px var(--fontBold);
     color: var(--darkBlue);
+    margin: 0;
 }
 
 .why-us-qoute::before,
@@ -2066,16 +2116,15 @@ header {
 }
 
 .about-feature-box .icon {
-    margin-bottom: 30px;
     height: 93px;
 }
 
 .about-feature-box .icon img {
-    width: 93px;
+    width: 75px;
 }
 
 .about-feature-box h2 {
-    font: Bold 40px/22px var(--fontBold);
+    font: Bold 25px/22px var(--fontBold);
     color: var(--white);
     margin-bottom: 30px;
     min-height: 40px;
@@ -2089,10 +2138,9 @@ header {
     display: block;
     position: absolute;
     top: 100%;
-    left: calc(50% - 48px);
+    left: calc(50% - 25px);
     height: 3px;
-    width: 96px;
-    margin-top: 4px;
+    width: 50px;
     border-radius: 5px;
 }
 
@@ -2214,7 +2262,7 @@ header {
 }
 
 .services-wrapper {
-    padding: 120px 0;
+    padding: 90px 0;
 }
 
 .services-wrapper .col-12 {
@@ -2227,8 +2275,8 @@ header {
 }
 
 .service-box .icon {
-    width: 135px;
-    height: 135px;
+    width: 110px;
+    height: 110px;
     box-shadow: var(--shadow);
     background: var(--serviceboxGrident);
     border-radius: 50%;
@@ -2242,18 +2290,18 @@ header {
 
 .service-box .data {
     background: var(--white);
-    margin-top: calc(-135px / 2);
-    padding: 90px 15px 20px;
+    margin-top: calc(-110px / 2);
+    padding: 75px 15px 30px;
     box-shadow: var(--shadow);
     border-radius: 16px;
-    min-height: 250px;
+    min-height: 225px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .service-box .data h3 {
-    font: Bold 28px/34px var(--fontBold);
+    font: Bold 18px/28px var(--fontBold);
     color: var(--darkBlue);
     margin-bottom: 15px;
 }
@@ -2263,7 +2311,7 @@ header {
     text-align: right;
     font: Light 28px/33px var(--fontNormal);
     position: relative;
-    padding: 0 25px;
+    padding: 0 20px;
     width: fit-content;
     width: max-content;
     margin: 0 auto;
@@ -2294,18 +2342,18 @@ header {
 }
 
 .services-wrapper h2 {
-    font: normal 30px/33px var(--fontNormal);
+    font: normal 25px/30px var(--fontNormal);
     color: var(--text);
-    margin: 50px auto;
+    margin: 40px auto;
     text-align: center;
 }
 
 .Btn-grident {
-    font: Bold 40px/33px var(--fontBold);
+    font: Bold 22px/30px var(--fontBold);
     box-shadow: var(--shadow);
     background: var(--serviceboxGrident);
     color: var(--white);
-    padding: 20px 30px;
+    padding: 15px 50px;
     border-radius: 35px;
     display: table;
     margin: auto;
@@ -2345,6 +2393,13 @@ header {
     }
 }
 
+@media (min-width:1024px) {
+   .services-wrapper .row {
+        width: 850px;
+        max-width: 100%;
+        margin: auto;
+    }
+}
 
 
 /*==========================||---------------------------||========================*/
@@ -2472,10 +2527,10 @@ header {
 .page-description p,
 .details-block p,
 .work-tech p {
-    font: normal 22px/26px var(--fontNormal);
+    font: normal 17px/30px var(--fontNormal);
     color: var(--text);
-    max-width: 1000px;
-    margin: 0 auto 25px;
+    max-width: 950px;
+    margin: 0 auto 20px;
     width: 100%;
 }
 
@@ -2515,7 +2570,7 @@ header {
 .work-tech-box h3 {
     width: 50%;
     margin: auto;
-    font: normal 26px/31px var(--fontNormal);
+    font: normal 19px/31px var(--fontNormal);
     color: var(--darkBlue);
 }
 
@@ -2601,19 +2656,20 @@ header {
 }
 
 .plan-step h4 {
-    font: normal 22px/26px var(--fontNormal);
+    font: normal 17px/26px var(--fontNormal);
+    margin: 0;
 }
 
 .plan-step::after {
     content: "";
     width: 0;
     height: 0;
-    border-top: 20px solid transparent;
-    border-right: 20px solid var(--white);
-    border-bottom: 20px solid transparent;
+    border-top: 15px solid transparent;
+    border-right: 15px solid var(--white);
+    border-bottom: 15px solid transparent;
     position: absolute;
     right: 0;
-    top: calc(50% - 15px);
+    top: calc(50% - 8px);
 }
 
 .plan-step::before {
@@ -2625,7 +2681,7 @@ header {
     border-bottom: 10px solid transparent;
     position: absolute;
     right: -3px;
-    top: calc(50% - 5px);
+    top: calc(50% - 3px);
     z-index: 1;
 }
 
@@ -2700,12 +2756,13 @@ header {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
+    height: 163px;
 }
 
 .example h3 {
-    font: Bold 37px/44px var(--fontBold);
+    font: Bold 22px/30px var(--fontBold);
     color: var(--darkBlue);
     position: relative;
 }
@@ -2724,8 +2781,8 @@ header {
     position: absolute;
     top: 100%;
     height: 3px;
-    width: 96px;
-    left: calc(50% - 48px);
+    width: 50px;
+    left: calc(50% - 25px);
     margin-top: 4px;
     border-radius: 5px;
 }
@@ -2746,7 +2803,7 @@ header {
 }
 
 .page-description.page-consulting h2 {
-    font: Bold 22px/26px var(--fontBold);
+    font: Bold 18px/26px var(--fontBold);
     color: var(--darkBlue);
     max-width: 1000px;
     margin: 0 auto;
@@ -2804,7 +2861,7 @@ header {
 }
 
 .social-tech-box h3 {
-    font: normal 24px/36px var(--fontNormal);
+    font: normal 20px/36px var(--fontNormal);
     color: var(--darkBlue);
 }
 
@@ -2812,7 +2869,7 @@ header {
 .social-tech-wrapper .col-12:nth-child(6),
 .social-tech-wrapper .col-12:nth-child(7),
 .social-tech-wrapper .col-12:nth-child(8) {
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .social-tech-wrapper .col-12:nth-child(9),
@@ -2909,8 +2966,7 @@ header {
 
 .social-strategy p {
     color: var(--text);
-    font: normal 22px/26px var(--fontNormal);
-    margin-bottom: 20px;
+    font: normal 20px/35px var(--fontNormal);
 }
 
 .social-strategy .Btn-grident {
@@ -2998,7 +3054,7 @@ header {
 
 .advertisment-channels .row {
     width: 100%;
-    max-width: 800px;
+    max-width: 730px;
     margin: auto;
     justify-content: center;
 }
@@ -3008,8 +3064,8 @@ header {
 }
 
 .channel a {
-    height: 143px;
-    width: 143px;
+    height: 130px;
+    width: 130px;
     display: block;
     margin: auto;
     border-radius: 50%;
@@ -3073,13 +3129,13 @@ header {
 }
 
 .writing-offer-content h3 {
-    font: Bold 23px/26px var(--fontBold);
+    font: Bold 20px/30px var(--fontBold);
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .writing-offer-content p {
-    font: normal 19px/26px var(--fontNormal);
+    font: normal 17px/26px var(--fontNormal);
     color: var(--text);
 }
 
@@ -3124,7 +3180,7 @@ header {
 }
 
 .writing-provides  p {
-    font: Bold 25px/26px var(--fontBold);
+    font: Bold 20px/33px var(--fontBold);
     margin-bottom: 45px;
     color: var(--text);
 }
@@ -3153,11 +3209,11 @@ header {
     padding: 55px 15px 20px;
     box-shadow: var(--shadow);
     border-radius: 16px;
-    min-height: 200px;
+    min-height: 170px;
 }
 
 .writing-provide-content h3 {
-    font: Bold  21px/28px var(--fontBold);
+    font: Bold  16px/28px var(--fontBold);
     color: var(--darkBlue);
     margin-bottom: 0;
 }
@@ -3193,7 +3249,7 @@ header {
 }
 
 .motion-provides .basic-content {
-    font: normal 22px/26px var(--fontNormal);
+    font: normal 19px/32px var(--fontNormal);
     width: 100%;
     max-width: 1000px;
     margin: 0 auto 70px;
@@ -3228,13 +3284,18 @@ header {
 }
 
 .motion-provide-content h3 {
-    font: Bold  21px/28px var(--fontBold);
+    font: Bold  19px/35px var(--fontBold);
     color: var(--darkBlue);
-    margin-bottom: 0;
+    margin-bottom: 5px;
+}
+
+.motion-provide-content p {
+    color: var(--text);
+    margin: 0;
 }
 
 .motion-provides h4 {
-    font: normal 22px/26px var(--fontNormal);
+    font: normal 20px/26px var(--fontNormal);
     margin: 80px auto;
     width: 100%;
     max-width: 1000px;
@@ -3263,7 +3324,7 @@ header {
 }
 
 .motion-offers .basic-content {
-    font: normal 22px/26px var(--fontNormal);
+    font: normal 20px/32px var(--fontNormal);
     width: 100%;
     max-width: 1000px;
     margin: 0 auto 70px;
@@ -3469,8 +3530,8 @@ header {
 }
 
 .creative-design-step {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3480,7 +3541,7 @@ header {
 
 .creative-design-step h3 {
     color: var(--white);
-    font: Bold 41px/80px var(--fontBold);
+    font: Bold 30px/80px var(--fontBold);
 }
 
 .creative-design-step:hover {
@@ -3502,26 +3563,33 @@ header {
     }
 }
 
+@media (min-width:1024px) {
+    .creative-design-steps .row {
+        width:900px;
+        margin: auto;
+    }
+}
+
 .creative-design-provides .basic-content {
     font-weight: normal;
     font-family: var(--fontNormal);
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 60px auto 80px;
 }
 
 .creative-design-provides .writing-provide-icon {
-    padding: 19px;
+    padding: 25px;
 }
 
 .creative-design-provides .writing-provide-content h3 {
-    font: Bold 35px/41px var(--fontBold);
+    font: Bold 18px/41px var(--fontBold);
 }
 
 @media (min-width:1200px) {
     .creative-design-provides .row {
         width: 100%;
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
     }
 }
@@ -3542,8 +3610,11 @@ header {
     margin-bottom: 40px;
 }
 
+.work-shop img {
+    width: 150px;
+}
 .work-shop h3 {
-    font: Bold 41px/80px var(--fontBold);
+    font: Bold 25px/60px var(--fontBold);
     color: var(--white);
     margin-top: 20px;
 }
@@ -3610,35 +3681,35 @@ header {
 }
 
 .seo-offer .icon {
-    width: 135px;
-    height: 135px;
+    width: 110px;
+    height: 110px;
     box-shadow: var(--shadow);
     background: var(--serviceboxGrident);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 27px;
     margin: auto;
     position: relative;
 }
 
 .seo-offer .data {
     background: var(--white);
-    margin-top: calc(-135px / 2);
-    padding: 90px 15px 20px;
+    margin-top: calc(-110px / 2);
+    padding: 75px 15px 20px;
     box-shadow: var(--shadow);
     border-radius: 16px;
-    min-height: 250px;
+    min-height: 210px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .seo-offer .data h3 {
-    font: Bold 27px/32px var(--fontBold);
+    font: Bold 20px/36px var(--fontBold);
     color: var(--darkBlue);
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .seo-offers .Btn-grident {
@@ -3683,10 +3754,11 @@ header {
     margin-bottom: 6px;
 }
 
-.web-techs h3 {
-    font: normal 18px/18px var(--fontNormal);
+.web-techs h5 {
+    font: normal 18px/25px var(--fontNormal);
     color: var(--darkBlue);
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 
@@ -3787,4 +3859,4 @@ header {
 
 .wow {
     animation-duration: 2s;
-  }
+}

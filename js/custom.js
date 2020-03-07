@@ -68,7 +68,6 @@ $(document).ready(function ($) {
     });
 
 
-
     // INPUT FOCUS ANIMATION 
     $('.field .form-control').focus(function(){
         $(this).parent('.field').addClass('focused');
@@ -85,6 +84,14 @@ $(document).ready(function ($) {
         $(this).parent('.field').removeClass('focused');
     });
 
+
+    // service hOVER 
+    $('.service:nth-child(1)').addClass('first');
+    $('.service:not(:nth-child(1))').hover(function(){
+        $('.service:nth-child(1)').removeClass('first');
+    }, function(){
+        $('.service:nth-child(1)').addClass('first');
+    });
 
     // MIX IT UP FILTER 
     $('.products-filter-list a').click(function(e){
