@@ -93,11 +93,7 @@ $(document).ready(function ($) {
         $('.service:nth-child(1)').addClass('first');
     });
 
-    // MIX IT UP FILTER 
-    $('.products-filter-list a').click(function(e){
-        e.preventDefault();
-    });
-
+    // MIX IT UP FILTER
     var mixer = mixitup('.products-filter-content', {
         selectors: {
             target: '.col-12'
@@ -105,6 +101,12 @@ $(document).ready(function ($) {
         animation: {
             duration: 400
         }
+    });
+
+    $('.products-filter-list a').click(function(e){
+        e.preventDefault();
+        $('.products-filter-list a').removeClass('active');
+        $(this).addClass('active');
     });
 
 
